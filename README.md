@@ -44,4 +44,36 @@ CREATE TABLE assunto(
 );
 ```
 
+#### 1.5 Criando a Tabela 'Livro'
+```
+CREATE TABLE livro(
+    id_livro INT PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(150) NOT NULL,
+    ano_publicacao YEAR,
+    FOREING KEY(id_editora) REFERENCES editora(id_editora),
+    FOREING KEY(id_autor) REFERENCES autor(id_autor),
+    FOREING KEY(id_assunto) REFERENCES assunto(id_assunto)
+);
+```
 
+#### 1.6 Criando uma Tabela EXTRA
+A tabela EXTRA vai servir para Exemplificar a exclusão
+```
+CREATE TABLE extra(
+    id_extra INT PRIMARY KEY AUTO_INCREMENT,
+    produtos VARCHAR(50),
+    quantidade INT(20),
+    preco DOUBLE NOT NULL
+
+);
+```
+
+#### Passo 2: Editar Tabelas usando 'ALTER'
+Ápos a criação da tabela, podemos adicionar novos campos, Vamos adicionar uam coluna 'email' na tabela 'autor'
+
+```
+SQL
+ALTER TABLE autor
+ADD COLUMN email VARCHAR(100);
+
+```
