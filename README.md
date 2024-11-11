@@ -12,3 +12,36 @@ criação de tabelas, chaves e até manipulação/consulta de dados.
 *__UPDATE__: Para atualizar os Registros
 *__DELETE__: Para Remover os Registros
 *__SELECT__: Para Consultar e Visualizar Dados
+
+## Passo 1:Criação do Banco de Dados e das Tabelas 
+#### 1.1 Criando o DB 
+```
+CREATE DATABASE bibloteca;
+USE bibloteca; 
+```
+
+#### 1.2 Criando a Tabela 'Editora'
+```
+CREATE TABLE editora (
+    id_editora INT PRIMARY KEY AUTO_INCREMENT,
+    nome_editora VARCHAR(100) NOT NUL,
+    pais VARCHAR(50)
+);
+```
+#### 1.3 Criando a Tabela 'Autor'
+```
+CREATE TABLE autor(
+    id_autor INT PRIMARY KEY AUTO_INCREMENT,
+    nome_autor VARCHAR(200),
+    data_nascimento DATE
+);
+```
+#### 1.4 Criando a TAbela 'Assuntos'
+```
+CREATE TABLE assunto(
+    id_assunto INT PRIMARY KEY AUTO_INCREMENT,
+    descrição_assunto VARCHAR(300) NOT NULL
+);
+```
+
+
